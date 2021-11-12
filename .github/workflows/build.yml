@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Install dependencies
-      run: sudo apt install -y qemu-system-x86 gcc-aarch64-linux-gnu mtools python3-pexpect git nasm iasl build-essential uuid-dev debhelper-compat lintian
+      run: sudo apt install -y qemu-system-x86 qemu-system-aarch64 gcc-aarch64-linux-gnu mtools python3-pexpect git nasm iasl build-essential uuid-dev debhelper-compat lintian
     - name: Building
       run: export TERM=xterm-256color && make
     - uses: "marvinpinto/action-automatic-releases@latest"
