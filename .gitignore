@@ -2,3 +2,4 @@
 *.buildinfo
 *.changes
 edk2.build
+.DS_Store
