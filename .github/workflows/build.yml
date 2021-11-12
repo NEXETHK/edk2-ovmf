@@ -16,9 +16,11 @@ jobs:
       run: apt install -y qemu-system-x86 gcc-aarch64-linux-gnu mtools python3-pexpect git nasm iasl build-essential uuid-dev debhelper-compat lintian
     - name: Building
       run: export TERM=xterm-256color && make
+
     - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
           prerelease: false
           files: |
             *.deb
